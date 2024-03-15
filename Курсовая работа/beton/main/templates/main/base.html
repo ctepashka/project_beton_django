@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header> 
+        <div class="banner"> <img class="logo" src="{% static 'img/banner.png' %}" alt=""/></div>
+      </header>
+      <div class="container">
+        <div class="main-menu">
+          <ul> 
+            <li> <a href="./index.html">Главная</a></li>
+            <li> <a href="./ys.html">Услуги</a></li>
+            <li> <a href="#kontact">Контакты</a></li>
+            <li> <a href="#office2">Офис</a></li>
+            <li> <a href="#partner2">Партнеры</a></li>
+            <li> <a href="./about.html">О компании</a></li>
+          </ul>
+        </div>
+      </div>
+    {% block content %}{% endblock %}
+    <div class="footer" id="kontact">
+        <div class="heading_2">
+          <h2>Связвться с нами</h2>
+        </div>
+        <div class="cont_footer">
+          <div class="telephone">
+            <div class="number">
+              <p>Телефон:</p>
+              <p>+7 123 456 78 90</p>
+            </div>
+            <div class="photo_telephone"><img src="{% static 'img/image 4.png' %}" alt=""/></div>
+          </div>
+          <div class="telephone">
+            <div class="number">
+              <p>Адрес:</p>
+              <p>г.Москва ул.Пушкина</p>
+            </div>
+            <div class="photo_telephone"><img src="{% static 'img/image 4.png' %}" alt=""/></div>
+          </div>
+          <div class="telephone">
+            <div class="number">
+              <p>Написать нам:</p>
+              <p>qwerty@gmail.com</p>
+            </div>
+            <div class="photo_telephone"><img src=".{% static 'img/image 4.png' %}" alt=""/></div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
